@@ -17,10 +17,10 @@ export const xmlToIntermediate = async (
 
 const normalizeMemoryXml = (memoryXmlContent: string): string => {
   // flip <#> to <hash>
-  memoryXmlContent = memoryXmlContent.replaceAll("#>", "hash>");
+  memoryXmlContent = memoryXmlContent.replace(/#>/g, "hash>");
 
   // prepend "numprefix" to <digit> elements
-  memoryXmlContent = memoryXmlContent.replaceAll(
+  memoryXmlContent = memoryXmlContent.replace(
     /<(\/?)(\d)>/g,
     "<$1numprefix$2>"
   );

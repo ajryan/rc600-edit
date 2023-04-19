@@ -31,5 +31,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
         cache-dependency-path: ./rc600-json/yarn.lock
-    - run: yarn install --frozen-lockfile
-    - run: yarn test-ci
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    - name: Run tests
+      run: yarn test-ci

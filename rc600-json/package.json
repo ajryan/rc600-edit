@@ -1,6 +1,6 @@
 {
   "name": "rc600-json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JSON translation of BOSS RC-600 Loop Station memory files",
   "private": false,
   "main": "./lib/cjs/index.js",
@@ -9,10 +9,15 @@
     "lib/"
   ],
   "author": "Aidan Ryan <cormac@tryptopain.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajryan/rc600-edit"
+  },
   "license": "MIT",
   "scripts": {
     "clean": "rimraf ./lib",
     "test": "jest",
+    "test-ci": "jest --reporters github-actions",
     "test-live": "run-p test:watch test:stare",
     "test:stare": "light-server --serve ./jest-stare --open -w \"jest-stare/index.html\"",
     "test:watch": "jest --watchAll --reporters default jest-stare",

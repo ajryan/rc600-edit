@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "rc600-edit"
+    },
+    {
+      "path": "rc600-json"
+    }
+  ],
+  "settings": {
+    "cSpell.words": ["Aidan", "ajryan", "numprefix"]
+  }
+}
